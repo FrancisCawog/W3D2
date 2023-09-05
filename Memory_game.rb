@@ -15,7 +15,7 @@ class Board
 
     def [](position)
         row, col = position
-        @board[row][col]
+        @grid[row][col]
     end
 
 
