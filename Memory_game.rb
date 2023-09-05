@@ -1,3 +1,5 @@
+require "./card.rb"
+
 class Board
     attr_reader :card
 
@@ -30,10 +32,8 @@ class Board
         @grid
     end
 
-    end
-
     def populate
-        card.randomize_cards
+        @grid.randomize_cards
     end
 
     def [](position)
@@ -41,8 +41,11 @@ class Board
         @grid[row][col]
     end
 
-
-
-
-
+    def render
+        @grid.each do |row|
+            puts row.join(" ")
+        end
+    end
 end
+
+
