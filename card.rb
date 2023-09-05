@@ -5,12 +5,17 @@ class Card
     def initialize(face_value)
         @face_value = face_value
         @face_status = "_"
-        @board = Board.new
+        #@board = Board.new
     end
 
-    def hide(position)
-
-
+    def hide
+        @board.populate.map do |row|
+            row.map do |ele|
+                if ele != "_"
+                    ele = '_'
+                end
+            end
+        end
     end
 
 
