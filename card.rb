@@ -18,11 +18,8 @@ class Card
         end
     end
 
-
-    def [](position)
-        row, col = position
-        @board[row][col]
-    end
+    def randomize_cards
+        arr =
 
 
 
